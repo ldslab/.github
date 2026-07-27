@@ -1,0 +1,15 @@
+# Пустые issue отключены: задача без контекста всё равно вернётся с вопросами.
+blank_issues_enabled: false
+
+contact_links:
+  - name: Сообщить об уязвимости
+    url: https://github.com/LDS-ADSU/.github/blob/main/SECURITY.md
+    about: Не создавайте публичный issue — уязвимости принимаются по закрытому каналу.
+
+  - name: Правила участия в разработке
+    url: https://github.com/LDS-ADSU/.github/blob/main/CONTRIBUTING.md
+    about: Ветки, коммиты, требования к pull request и ревью.
+
+  - name: Инженерные конвенции
+    url: https://github.com/LDS-ADSU/engineering-guidelines
+    about: Стандарты кода, чек-листы ревью, конфиги линтеров. Доступно участникам организации.

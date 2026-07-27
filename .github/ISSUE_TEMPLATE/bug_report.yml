@@ -1,0 +1,66 @@
+name: Дефект
+description: Что-то работает не так, как должно
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Уязвимость — не сюда.** О проблемах безопасности сообщайте по
+        [политике безопасности](https://github.com/LDS-ADSU/.github/blob/main/SECURITY.md),
+        не в публичном issue.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Что происходит
+      description: Наблюдаемое поведение, коротко и по делу.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидалось
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Пронумерованно. Если воспроизводится не всегда — укажите, при каких условиях.
+      placeholder: |
+        1. Открыть …
+        2. Нажать …
+        3. Наблюдаем …
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Логи, скриншоты, идентификаторы
+      description: |
+        Сообщения об ошибках, коды ответов, идентификаторы запросов или документов, время
+        события. **Персональные данные, токены и пароли не прикладывайте** — замените
+        идентификаторами или замаскируйте.
+      render: text
+
+  - type: input
+    id: environment
+    attributes:
+      label: Где воспроизводится
+      placeholder: прод / стенд / локально; версия или коммит; браузер
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Влияние
+      options:
+        - Блокирует работу пользователей
+        - Мешает, но есть обходной путь
+        - Мелкое неудобство
+    validations:
+      required: true
