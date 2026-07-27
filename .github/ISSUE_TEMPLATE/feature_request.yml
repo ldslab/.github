@@ -1,0 +1,55 @@
+name: Задача или доработка
+description: Новая функциональность либо изменение существующей
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Задача
+      description: |
+        Какую проблему это решает и у кого она возникает. Опишите потребность, а не готовое
+        решение: решение обсудим здесь же.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое решение
+      description: Если оно уже есть. Если нет — оставьте пустым.
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Как поймём, что готово
+      description: Проверяемые условия, а не «работает хорошо».
+      placeholder: |
+        - [ ] …
+        - [ ] …
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected
+    attributes:
+      label: Что затрагивает
+      description: Модули, сервисы, API, интеграции, схема БД, права доступа.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Срочность
+      options:
+        - Есть срок или зависимость (укажите ниже)
+        - Обычная
+        - Когда дойдут руки
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Дополнительный контекст
+      description: |
+        Ссылки, макеты, обсуждения, примеры. **Персональные данные и скриншоты с боевыми
+        данными не прикладывайте.**
