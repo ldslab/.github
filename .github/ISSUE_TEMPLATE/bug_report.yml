@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         **Уязвимость — не сюда.** О проблемах безопасности сообщайте по
-        [политике безопасности](https://github.com/LDS-ADSU/.github/blob/main/SECURITY.md),
+        [политике безопасности](https://github.com/ldslab/.github/blob/main/SECURITY.md),
         не в публичном issue.
 
   - type: textarea
