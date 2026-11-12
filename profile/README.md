@@ -17,8 +17,8 @@
 
 ## English
 
-We design, build and run software for universities and colleges: from applicant and student
-services to the shared platform underneath them. Reusable parts are published as open source.
+We design, build and run software for education: from applicant and student services to the
+shared platform underneath them. Reusable parts go open source, starting with deploy-kit.
 
 ### What we work on
 
@@ -56,9 +56,9 @@ Report vulnerabilities privately as described in
 
 ## Русский
 
-Проектируем, разрабатываем и сопровождаем программные решения для вузов и колледжей: от сервисов
+Проектируем, разрабатываем и сопровождаем программные решения для образования: от сервисов
 для абитуриентов и студентов до общей платформы под ними. Переиспользуемые части публикуем
-в открытом доступе.
+в открытом доступе, начиная с deploy-kit.
 
 ### Чем занимаемся
 
