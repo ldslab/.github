@@ -1,145 +1,93 @@
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/177096638?v=4" width="120" alt="LDS-ADSU logo">
+  <img src="https://avatars.githubusercontent.com/u/177096638?v=4" width="112" alt="LDS logo">
+</p>
+
+<h1 align="center">LDS · Laboratory of Digital Solutions</h1>
+
+<p align="center">
+  Independent open-source lab building digital services for education.<br>
+  Независимая open-source лаборатория: цифровые сервисы для образования.
 </p>
 
 <p align="center">
-  <a href="#english">English</a> · <a href="#russian">Русский</a>
+  <a href="#english">English</a> · <a href="#русский">Русский</a>
 </p>
-
-<a id="english"></a>
-
-<h1 align="center">Laboratory of Digital Solutions ADSU</h1>
-
-<p align="center">
-  We design, build, and maintain digital services for the ADSU university ecosystem.
-</p>
-
-<p align="center">
-  <strong>Reliable systems. Clear processes. Measurable impact.</strong>
-</p>
-
-## About us
-
-The Laboratory of Digital Solutions (LDS) is an engineering team focused on the digital development of ADSU. We turn operational and academic needs into secure, maintainable, and user-centered software.
-
-Our work spans the full product lifecycle: discovery, architecture, development, integration, deployment, monitoring, and continuous improvement.
-
-## What we build
-
-- Digital services for students, applicants, faculty, and university staff
-- Admissions, education, scheduling, and administrative workflows
-- Integration services and shared backend platforms
-- Identity, access, verification, and security solutions
-- Monitoring, analytics, and operational dashboards
-- Applied AI tools for university processes
-
-## Engineering principles
-
-- **User value first** — technology serves real academic and operational needs.
-- **Security and privacy by design** — data protection is considered throughout the lifecycle.
-- **Reliability and observability** — systems should be measurable, diagnosable, and resilient.
-- **Maintainable delivery** — clear ownership, documentation, review, and automated checks support long-term development.
-- **Open collaboration** — decisions are documented, feedback is welcomed, and knowledge is shared across teams.
-- **Continuous improvement** — we deliver incrementally, learn from production, and refine our solutions.
-
-## Repositories and access
-
-Most LDS repositories contain internal university systems and are therefore private. Access is granted to project members according to their responsibilities.
-
-Each repository is the source of truth for its own setup instructions, architecture notes, contribution rules, and operational documentation.
-
-## Contributing
-
-If you are an LDS team member:
-
-1. Read the repository documentation and contribution guidelines.
-2. Discuss significant changes before implementation.
-3. Keep changes focused and document important decisions.
-4. Submit changes through a pull request and complete the required review and checks.
-
-Guidance for external contributors will be published in repositories that accept public contributions.
-
-## Security
-
-Please do not disclose suspected vulnerabilities in public issues or discussions. Use the repository's private security reporting channel when available, or contact the responsible maintainers through an approved internal channel.
-
-## Licensing
-
-Licensing and usage terms are defined separately in each repository. Access to a repository does not grant rights beyond the license or agreement provided with that project.
 
 ---
 
-<p align="center">
-  <sub>Built by the Laboratory of Digital Solutions ADSU.</sub>
-</p>
+## English
 
-<br>
+We design, build and run software for universities and colleges: from applicant and student
+services to the shared platform underneath them. Reusable parts are published as open source.
 
----
+### What we work on
 
-<a id="russian"></a>
+- **Personal accounts** for students and staff: records, statements, requests, schedules, payslips
+- **Admissions**: applications, competitive lists, enrollment orders, queue screens
+- **Integration platform**: an event bus on Kafka with CloudEvents, transactional outbox and inbox
+- **Identity and access**: sign-in, verification, role-based permissions
+- **Operations**: status pages and metrics on Prometheus, blue-green deploys
+- **Applied AI**: extracting data from documents and images
 
-<h1 align="center">Лаборатория цифровых решений АГУ</h1>
+### Open source
 
-<p align="center">
-  Мы проектируем, разрабатываем и поддерживаем цифровые сервисы для университетской экосистемы АГУ.
-</p>
+| Project | What it is |
+| --- | --- |
+| [deploy-kit](https://github.com/ldslab/deploy-kit) | Blue-green deploys for JVM services behind Caddy, packaged as GitHub Actions with a stub-driven test harness |
 
-<p align="center">
-  <strong>Надёжные системы. Понятные процессы. Измеримый результат.</strong>
-</p>
+### Stack
 
-## О нас
+Kotlin · Spring Boot · Angular · TypeScript · PostgreSQL · Kafka · Redis · Caddy · Tauri · GitHub Actions
 
-Лаборатория цифровых решений (LDS) — инженерная команда, которая развивает цифровую среду АГУ. Мы создаём безопасные, удобные и сопровождаемые программные решения для образовательных и административных задач.
+### How we work
 
-Наша работа охватывает весь жизненный цикл цифрового продукта: анализ потребностей, проектирование архитектуры, разработку, интеграцию, развёртывание, мониторинг и дальнейшее совершенствование.
+- Pull requests stay small enough to review in twenty minutes; we merge them with green CI and a code owner's approval.
+- A fixed defect comes with a test that fails without the fix.
+- A red main branch is fixed before anything else.
+- Secrets and personal data never enter git; a leaked secret is rotated, not just deleted.
 
-## Что мы создаём
+### Contributing and security
 
-- Цифровые сервисы для студентов, абитуриентов, преподавателей и сотрудников университета
-- Системы сопровождения приёмной кампании, образовательных и административных процессов, составления и публикации расписания
-- Интеграционные сервисы и общие серверные платформы
-- Системы идентификации, управления доступом, проверки данных и информационной безопасности
-- Средства мониторинга, аналитики и операционные панели
-- Прикладные инструменты искусственного интеллекта для университетских процессов
-
-## Инженерные принципы
-
-- **Польза для пользователей прежде всего** — технологии должны решать реальные образовательные и административные задачи.
-- **Безопасность и конфиденциальность с этапа проектирования** — требования к защите данных учитываются на всём жизненном цикле продукта.
-- **Надёжность и наблюдаемость** — состояние систем должно быть измеримым, диагностируемым, а сами системы — устойчивыми к сбоям.
-- **Сопровождаемость** — понятные зоны ответственности, документация, проверка изменений и автоматизированный контроль качества обеспечивают долгосрочное развитие продуктов.
-- **Открытое взаимодействие** — решения документируются, обратная связь приветствуется, а команды обмениваются знаниями.
-- **Непрерывное совершенствование** — мы выпускаем изменения поэтапно, анализируем работу систем и последовательно улучшаем их.
-
-## Репозитории и доступ
-
-Большинство репозиториев LDS относятся к внутренним университетским системам. Доступ к ним предоставляется участникам проектов в соответствии с их зоной ответственности.
-
-README и документация каждого репозитория являются основными источниками информации о запуске, архитектуре, правилах внесения изменений и эксплуатации соответствующего проекта.
-
-## Участие в разработке
-
-Если вы состоите в команде LDS:
-
-1. До начала работы ознакомьтесь с README, документацией и правилами участия в разработке конкретного репозитория.
-2. Согласуйте существенные изменения до начала реализации.
-3. Делайте изменения небольшими и целенаправленными, документируйте важные решения.
-4. Отправляйте изменения через запрос на слияние, проходите проверку кода и все предусмотренные автоматизированные проверки.
-
-Правила для внешних участников публикуются в репозиториях, открытых для публичного участия в разработке.
-
-## Безопасность
-
-Не сообщайте о предполагаемых уязвимостях в открытых задачах или обсуждениях. Используйте механизм конфиденциального сообщения об уязвимости в соответствующем репозитории, если он доступен, либо свяжитесь с ответственными за проект по утверждённому внутреннему каналу.
-
-## Лицензирование
-
-Условия лицензирования и использования определяются отдельно для каждого репозитория. Доступ к репозиторию не предоставляет прав, выходящих за рамки лицензии или соглашения, действующих для соответствующего проекта.
+Start with [CONTRIBUTING.md](https://github.com/ldslab/.github/blob/main/CONTRIBUTING.md).
+Report vulnerabilities privately as described in
+[SECURITY.md](https://github.com/ldslab/.github/blob/main/SECURITY.md), never in public issues.
 
 ---
 
-<p align="center">
-  <sub>Лаборатория цифровых решений АГУ.</sub>
-</p>
+## Русский
+
+Проектируем, разрабатываем и сопровождаем программные решения для вузов и колледжей: от сервисов
+для абитуриентов и студентов до общей платформы под ними. Переиспользуемые части публикуем
+в открытом доступе.
+
+### Чем занимаемся
+
+- **Личные кабинеты** студентов и сотрудников: успеваемость, ведомости, заявления, расписание, расчётные листки
+- **Приёмная кампания**: приём документов, конкурсные списки, приказы о зачислении, экраны электронной очереди
+- **Интеграционная платформа**: событийная шина на Kafka с CloudEvents, transactional outbox и inbox
+- **Идентификация и доступ**: вход, верификация, ролевая модель прав
+- **Эксплуатация**: страницы статуса и метрики на Prometheus, blue-green выкладка
+- **Прикладной ИИ**: извлечение данных из документов и изображений
+
+### Открытые проекты
+
+| Проект | Что это |
+| --- | --- |
+| [deploy-kit](https://github.com/ldslab/deploy-kit) | Blue-green выкладка JVM-сервисов за Caddy в виде GitHub Actions, с тестовым стендом на заглушках |
+
+### Стек
+
+Kotlin · Spring Boot · Angular · TypeScript · PostgreSQL · Kafka · Redis · Caddy · Tauri · GitHub Actions
+
+### Как работаем
+
+- Pull request читается за двадцать минут; мержим его с зелёным CI и одобрением владельца кода.
+- Исправленный дефект закрывается тестом, который без исправления падает.
+- Красная основная ветка чинится первой.
+- Секреты и персональные данные в git не попадают; утёкший секрет ротируется, а не просто удаляется.
+
+### Участие и безопасность
+
+Начните с [CONTRIBUTING.md](https://github.com/ldslab/.github/blob/main/CONTRIBUTING.md).
+Об уязвимостях сообщайте закрыто, как описано в
+[SECURITY.md](https://github.com/ldslab/.github/blob/main/SECURITY.md), а не в публичных issue.

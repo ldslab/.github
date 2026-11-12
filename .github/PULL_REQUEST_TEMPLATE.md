@@ -1,7 +1,7 @@
 <!--
   Шаблон действует во всех репозиториях организации.
   Незаполненные разделы удаляйте, а не оставляйте пустыми.
-  Правила — CONTRIBUTING.md и LDS-ADSU/engineering-guidelines.
+  Правила — CONTRIBUTING.md и ldslab/engineering-guidelines.
 -->
 
 ## Зачем
